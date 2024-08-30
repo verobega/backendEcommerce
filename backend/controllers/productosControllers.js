@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Producto = require("../models/productosModel");
+const { user } = require("pg/lib/defaults");
 
 const getProductos = asyncHandler(async (req, res) => {
     const productos = await Producto.find();
